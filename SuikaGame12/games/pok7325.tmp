@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://7blwtym6fpn"]
+
+[ext_resource type="Script" path="res://pokeball.gd" id="1_4xkex"]
+[ext_resource type="Texture2D" uid="uid://d36xobup83f0o" path="res://assets/pokeball-modified.png" id="1_efs03"]
+[ext_resource type="Texture2D" uid="uid://cqsaowm07xwra" path="res://assets/meowth-modified.png" id="3_0g26k"]
+[ext_resource type="Texture2D" uid="uid://cdhuauww415bu" path="res://assets/eevee-modified.png" id="4_w7mtr"]
+
+[node name="pokeball" type="Node2D"]
+script = ExtResource("1_4xkex")
+
+[node name="pokeball" type="Sprite2D" parent="."]
+position = Vector2(14, -14)
+scale = Vector2(0.0527273, 0.0529545)
+texture = ExtResource("1_efs03")
+
+[node name="Meowth" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-1, 3)
+scale = Vector2(0.0817308, 0.0814528)
+texture = ExtResource("3_0g26k")
+
+[node name="Eevee" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-1, 3)
+scale = Vector2(0.162879, 0.162879)
+texture = ExtResource("4_w7mtr")
+
+[connection signal="dropped_fruit" from="." to="." method="_on_dropped_fruit"]

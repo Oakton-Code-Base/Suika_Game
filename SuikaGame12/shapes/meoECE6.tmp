@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1lsiy07y45gb"]
+
+[ext_resource type="Script" path="res://shapes/meowth.gd" id="1_m6nys"]
+[ext_resource type="Texture2D" uid="uid://cqsaowm07xwra" path="res://assets/meowth-modified.png" id="1_o6h0i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hbrg"]
+
+[node name="meowth" type="RigidBody2D"]
+script = ExtResource("1_m6nys")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_0hbrg")
+
+[node name="Meowth-modified" type="Sprite2D" parent="."]
+position = Vector2(-5.96046e-08, 1)
+scale = Vector2(0.28726, 0.290476)
+texture = ExtResource("1_o6h0i")

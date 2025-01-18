@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnfhx14rl4av3"]
+
+[ext_resource type="Texture2D" uid="uid://bbbr4nisf40tc" path="res://assets/but.png" id="1_g0dlw"]
+[ext_resource type="Script" path="res://shapes/butterfree.gd" id="1_o050p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3sqoc"]
+size = Vector2(82.857, 82.8572)
+
+[node name="butterfree" type="RigidBody2D"]
+script = ExtResource("1_o050p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(11, 15)
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_3sqoc")
+
+[node name="But" type="Sprite2D" parent="."]
+position = Vector2(11.25, 14.75)
+scale = Vector2(0.473077, 0.473077)
+texture = ExtResource("1_g0dlw")
+
+[connection signal="fruits_collided" from="." to="." method="_on_fruits_collided"]

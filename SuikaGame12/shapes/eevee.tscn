@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpqtfogtmlic7"]
+
+[ext_resource type="Texture2D" uid="uid://cdhuauww415bu" path="res://assets/eevee-modified.png" id="1_5t72s"]
+[ext_resource type="Script" path="res://shapes/eevee.gd" id="1_j14du"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lgoud"]
+size = Vector2(16.6667, 16.5417)
+
+[node name="eevee" type="RigidBody2D"]
+script = ExtResource("1_j14du")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-15, 14.8125)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_lgoud")
+
+[node name="Eevee" type="Sprite2D" parent="."]
+position = Vector2(-14.5, 14.8295)
+scale = Vector2(0.386364, 0.386364)
+texture = ExtResource("1_5t72s")

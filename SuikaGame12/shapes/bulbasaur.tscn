@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhl8lukyjgdx"]
+
+[ext_resource type="Texture2D" uid="uid://dfxmmb5gy6js0" path="res://assets/Screenshot 2024-12-23 190202.png" id="1_ky0ri"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_otceo"]
+size = Vector2(106, 114)
+
+[node name="bulbasaur" type="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(32.2499, 35.25)
+scale = Vector2(0.75, 0.75)
+shape = SubResource("RectangleShape2D_otceo")
+
+[node name="Screenshot2024-12-23190202" type="Sprite2D" parent="."]
+position = Vector2(33.5, 35.296)
+scale = Vector2(0.648, 0.631284)
+texture = ExtResource("1_ky0ri")

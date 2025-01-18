@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh2dhwje1owx3"]
+
+[ext_resource type="Texture2D" uid="uid://cmakkk85eysub" path="res://assets/Screenshot 2024-12-23 190219.png" id="1_t7drh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n506x"]
+size = Vector2(115, 118.75)
+
+[node name="squirtle" type="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-13, -14.5)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_n506x")
+
+[node name="Screenshot2024-12-23190219" type="Sprite2D" parent="."]
+position = Vector2(-13.5, -15.7846)
+scale = Vector2(0.715385, 0.715385)
+texture = ExtResource("1_t7drh")
