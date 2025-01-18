@@ -36,6 +36,7 @@ func _ready():
 	setup()
 	spawn_new_fruit()
 	
+
 func _drop():
 	current_poke.hide()
 	
@@ -44,6 +45,7 @@ func _drop():
 
 func _physics_process(delta):
 	var mouse_x = get_viewport().get_mouse_position().x
+	
 	
 	if mouse_x > 410 and mouse_x < 980:
 		position.x = mouse_x
@@ -56,7 +58,7 @@ func _physics_process(delta):
 func _ticker():
 	tick += 1
 	if tick > drop_cooldown:
-		print('ready')
+	#	print('ready')
 		spawn_new_fruit()
 		tick = 0
 		wait = false
