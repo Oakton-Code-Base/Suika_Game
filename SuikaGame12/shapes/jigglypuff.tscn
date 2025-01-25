@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnuw6y5mepbxs"]
+[gd_scene load_steps=5 format=3 uid="uid://dnuw6y5mepbxs"]
 
 [ext_resource type="Texture2D" uid="uid://j2imf140p7dk" path="res://assets/Screenshot 2024-12-23 184419.png" id="1_64tjb"]
 [ext_resource type="Script" path="res://shapes/jigglypuff.gd" id="1_cfcbd"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2wu2y"]
+bounce = 0.3
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4u8xo"]
 size = Vector2(75.3847, 81.5387)
 
 [node name="jigglypuff" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_2wu2y")
 script = ExtResource("1_cfcbd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

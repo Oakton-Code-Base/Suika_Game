@@ -30,6 +30,8 @@ func _on_pokeball_dropped_fruit(pos, fruit_id):
 func _spawn_next_fruit(poke_id, pos):
 	#print('new spawn')
 	var new_id = poke_id + 1
+	if (new_id == 8):
+		new_id = 0;
 	_spawn_fruit(pos, new_id)
 	
 	

@@ -1,11 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhl8lukyjgdx"]
+[gd_scene load_steps=5 format=3 uid="uid://dhl8lukyjgdx"]
 
+[ext_resource type="Script" path="res://shapes/bulbasaur.gd" id="1_8dydm"]
 [ext_resource type="Texture2D" uid="uid://dfxmmb5gy6js0" path="res://assets/Screenshot 2024-12-23 190202.png" id="1_ky0ri"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ocg6j"]
+bounce = 0.3
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_otceo"]
 size = Vector2(106, 114)
 
 [node name="bulbasaur" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_ocg6j")
+script = ExtResource("1_8dydm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(32.2499, 35.25)

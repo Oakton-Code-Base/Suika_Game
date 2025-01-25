@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://clyphm4vt7dd2"]
+
+[ext_resource type="Texture2D" uid="uid://qf5wwhy75vwt" path="res://assets/bubble.png" id="1_ab7dl"]
+[ext_resource type="Script" path="res://shapes/bubble.gd" id="1_wbmib"]
+[ext_resource type="Texture2D" uid="uid://cqsaowm07xwra" path="res://assets/meowth-modified.png" id="3_1204q"]
+[ext_resource type="Texture2D" uid="uid://2qk0q7tongiu" path="res://shapes/but.png" id="4_7gti0"]
+[ext_resource type="Texture2D" uid="uid://j2imf140p7dk" path="res://assets/Screenshot 2024-12-23 184419.png" id="5_rvmvv"]
+[ext_resource type="Texture2D" uid="uid://cdhuauww415bu" path="res://assets/eevee-modified.png" id="10_n1tie"]
+
+[node name="Bubble" type="Node2D"]
+script = ExtResource("1_wbmib")
+
+[node name="Bubble" type="Sprite2D" parent="."]
+scale = Vector2(0.606299, 0.668089)
+texture = ExtResource("1_ab7dl")
+
+[node name="Meowth" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(10, 9)
+scale = Vector2(0.141526, 0.141045)
+texture = ExtResource("3_1204q")
+
+[node name="Butterfree" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(11, 9)
+scale = Vector2(0.286874, 0.286874)
+texture = ExtResource("4_7gti0")
+
+[node name="Jigglypuff" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(11, 9)
+scale = Vector2(0.247099, 0.247099)
+texture = ExtResource("5_rvmvv")
+
+[node name="Eevee" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(10, 9)
+scale = Vector2(0.225439, 0.225439)
+texture = ExtResource("10_n1tie")

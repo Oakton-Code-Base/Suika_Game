@@ -15,26 +15,41 @@ extends Node2D
 var poke_list
 var current_poke
 var current_poke_id
+
+var next_poke
+var next_poke_id
+
 var tick = 0
 var wait = false
 
 signal dropped_fruit
+signal nextfruit
+
+
 const speed = 6
-const drop_cooldown = 55
+const drop_cooldown = 0
+#55	
 
 
 func pick_random_poke():
 	return rng.randi_range(0, 3)
 
 func spawn_new_fruit():
-	current_poke_id = pick_random_poke()
-	current_poke = poke_list[current_poke_id]
+	
+	next_poke_id = pick_random_poke()
+	next_poke = poke_list[next_poke_id]	
+	nextfruit.emit(next_poke_id)
+	
 	current_poke.show()
 
 func _ready():
 	rng.randomize()
 	setup()
+	current_poke_id = pick_random_poke()
+	current_poke = poke_list[current_poke_id]
+	
 	spawn_new_fruit()
+
 	
 
 func _drop():
@@ -42,6 +57,8 @@ func _drop():
 	
 	wait = true
 	dropped_fruit.emit(position, current_poke_id)
+	current_poke = next_poke
+	
 
 func _physics_process(delta):
 	var mouse_x = get_viewport().get_mouse_position().x
